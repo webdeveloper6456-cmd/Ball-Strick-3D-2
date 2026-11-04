@@ -369,13 +369,9 @@ function rewarded(cb){
   };
   const adFn = window["show_"+MONETAG_ZONE_ID];
   if(typeof adFn === "function"){
-    adFn().then((result)=>{
-      // Monetag reward verification
-      if(result && result.reward_event_type === 'valued'){
-        done(true);
-      } else {
-        done(false);
-      }
+        adFn().then(()=>{
+      // অ্যাড সফলভাবে শেষ হয়েছে, সরাসরি রিওয়ার্ড দিন
+      done(true);
     }).catch(()=>done(false));
   } else {
     toast('Ad not available right now. Try again later.');
