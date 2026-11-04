@@ -343,7 +343,7 @@ const gp=on=>{};  // Monetag has no gameplay events
 function toast(m){let t=document.getElementById('toast');if(!t){t=document.createElement('div');t.id='toast';t.style.cssText='position:fixed;left:50%;bottom:12%;transform:translateX(-50%);background:rgba(0,0,0,.85);color:#fff;padding:12px 18px;border-radius:14px;font:bold 15px Arial;z-index:60;transition:opacity .3s;max-width:80vw;text-align:center;pointer-events:none';document.body.appendChild(t)}t.textContent=m;t.style.opacity=1;clearTimeout(t._h);t._h=setTimeout(()=>{t.style.opacity=0},2800)}
 
 // আপনা र Zone ID এখানে বসান (Monetag dashboard থেকে):
-const MONETAG_ZONE_ID = "YOUR_ZONE_ID";
+const MONETAG_ZONE_ID = "12192454";
 
 // Interstitial ad (menu, retry — midgame)
 function interstitial(cb){
